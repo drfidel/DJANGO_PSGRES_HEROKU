@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'whitenoise.runserver_nostatic',
+    'Home',
 ]
 
 MIDDLEWARE = [
@@ -84,7 +85,7 @@ DATABASES = {
         'USER': os.environ.get('PSGRES_USERNAME'), 
         'PASSWORD' : os.environ.get('PSGRES_PASSCODE'),
         'HOST' : 'localhost',
-        'PORT' : '5432',
+        'PORT' : '',
     }
 }
 
@@ -136,8 +137,8 @@ STATIC_ROOT = os.path.join(BASE_DIR,'static')
 STATICFILES_DIRS = [os.path.join(BASE_DIR,'project_name/static')
 ]
 
-EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+#EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+#EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 
 #MEDIA FILE VARIABLES
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
